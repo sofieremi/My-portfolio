@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+<section>
+    <nav>
+        <div class="logo">
+            portfolio
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="area">
+            <div class="left">
+                <img src="{% static 'images/my7.jpg' %}" alt="picture" class="round">
+            </div>
+            <div class="right">
+                <div class="area1">
+                    <div class="social">
+                        <a href="https://t.me/sofieremi"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://github.com/sofieremi"><i class="fab fa-git"></i></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://instagram.com/sofi_eremina_" class="inst"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="#" id="contact"></a>
+<section>
+    <div class="main">
+        <form action="." method="post">
+            {% csrf_token %}
+            <div class="contact-area">
+{#                <div class="title">Contact me</div>#}
+                <div class="field">
+                    <div class="title">Contact me</div>
+                    <div class="input-field"><input class="input1" type="text" placeholder="Name" name="name"></div>
+                    <div class="input-field"><input class="input2" type="number" placeholder="Phone number" name="phone"></div>
+                </div>
+                <div class="input-field-btn">
+                    <input type="submit" class="btn">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
